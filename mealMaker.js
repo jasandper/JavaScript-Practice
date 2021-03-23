@@ -48,7 +48,7 @@ const menu = {
         const main = this.generateRandomDish('mains')
         const dessert = this.generateRandomDish('desserts')
         const totalPrice = appetizer.price + main.price + dessert.price
-        return `Appetizer: ${appetizer}...Main: ${main}...Dessert: ${dessert}...Total: $${totalPrice}`
+        return `Appetizer: ${appetizer.dish}...Main: ${main.dish}...Dessert: ${dessert.dish}...Total: $${totalPrice}`
     }
 
 }
@@ -64,4 +64,5 @@ menu.addDishToCourse('desserts', 'lemon cake', 7.50)
 menu.addDishToCourse('desserts', 'cheesecake', 9.25)
 menu.addDishToCourse('desserts', 'lava cake', 7.25)
 
-console.log(menu.courses)
+let meal = menu.generateMeal()
+console.log(meal);
