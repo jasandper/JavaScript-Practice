@@ -1,5 +1,5 @@
 // Creat meal object
-const meal = {
+const menu = {
     _courses: {
         appetizers: [],
         mains: [],
@@ -42,6 +42,26 @@ const meal = {
         const dishes = this._courses[courseName]
         const randomNum = Math.floor(Math.random() * dishes.length)
         return dishes[randomNum]
+    },
+    generateMeal () {
+        const appetizer = this.generateRandomDish('appetizers')
+        const main = this.generateRandomDish('mains')
+        const dessert = this.generateRandomDish('desserts')
+        const totalPrice = appetizer.price + main.price + dessert.price
+        return `Appetizer: ${appetizer}...Main: ${main}...Dessert: ${dessert}...Total: $${totalPrice}`
     }
 
 }
+
+// Add to menu
+menu.addDishToCourse('appetizers', 'chef salad', 8.50)
+menu.addDishToCourse('appetizers', 'tortilla soup', 7.50)
+menu.addDishToCourse('appetizers', 'chips and queso', 9.50)
+menu.addDishToCourse('mains', 'steak and shrimp', 20.50)
+menu.addDishToCourse('mains', 'atlantic salmon', 21.50)
+menu.addDishToCourse('mains', 'herb crusted chicken', 15.50)
+menu.addDishToCourse('desserts', 'lemon cake', 7.50)
+menu.addDishToCourse('desserts', 'cheesecake', 9.25)
+menu.addDishToCourse('desserts', 'lava cake', 7.25)
+
+console.log(menu.courses)
