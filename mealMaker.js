@@ -1,4 +1,4 @@
-// Creat menu object
+// Create menu object
 const menu = {
     _courses: {
         appetizers: [],
