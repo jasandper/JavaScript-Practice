@@ -37,6 +37,11 @@ const meal = {
             price: dishPrice
         }
         this._courses[courseName].push(dish)
+    },
+    generateRandomDish (courseName) {
+        const dishes = this._courses[courseName]
+        const randomNum = Math.floor(Math.random() * dishes.length)
+        return dishes[randomNum]
     }
 
 }
