@@ -30,4 +30,13 @@ const meal = {
     set desserts (dessertIn) {
         dessertIn = this._courses.desserts
     },
+    addDishToCourse (courseName, dishName, dishPrice) {
+        const dish = {
+            name: courseName,
+            dish: dishName,
+            price: dishPrice
+        }
+        this._courses[courseName].push(dish)
+    }
+
 }
