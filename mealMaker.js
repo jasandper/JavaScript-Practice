@@ -1,4 +1,4 @@
-// Creat meal object
+// Creat menu object
 const menu = {
     _courses: {
         appetizers: [],
@@ -64,5 +64,6 @@ menu.addDishToCourse('desserts', 'lemon cake', 7.50)
 menu.addDishToCourse('desserts', 'cheesecake', 9.25)
 menu.addDishToCourse('desserts', 'lava cake', 7.25)
 
+// Create unique meal
 let meal = menu.generateMeal()
 console.log(meal);
