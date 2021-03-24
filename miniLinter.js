@@ -29,6 +29,16 @@ betterWords.forEach(word => {
    }
 })
 
+// Determine how many sentences are in the story
+let sentences = 0;
+betterWords.forEach(word => {
+    if(word[word.length -1] === '.' || word[word.length - 1] === '!') {
+        sentences++
+    }
+})
+
+
+
 
 // Word count
 console.log(`original word count: ${storyWords.length}`);
@@ -37,4 +47,9 @@ console.log(`adjusted word count: ${betterWords.length}`);
 console.log(`'really' used ${really} times`)
 console.log(`'very' used ${very} times`)
 console.log(`'basically' used ${basically} times`)
+// sentence count
+console.log(`Total sentences: ${sentences}`)
+// print adjusted story
+console.log(betterWords.join(' '))
+
 
