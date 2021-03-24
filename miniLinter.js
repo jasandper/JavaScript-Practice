@@ -13,5 +13,28 @@ const betterWords = storyWords.filter(word => {
         return true;
     }
 })
-console.log(betterWords)
+
+// Determine how many times overusedWords appear in story
+let really = 0;
+let very = 0;
+let basically = 0;
+betterWords.forEach(word => {
+   switch (word) {
+       case 'really':
+           really++
+       case 'very':
+           very++
+        case 'basically':
+            basically++
+   }
+})
+
+
+// Word count
+console.log(`original word count: ${storyWords.length}`);
+console.log(`adjusted word count: ${betterWords.length}`);
+// overusedWord count
+console.log(`'really' used ${really} times`)
+console.log(`'very' used ${very} times`)
+console.log(`'basically' used ${basically} times`)
 
