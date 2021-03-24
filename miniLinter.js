@@ -6,4 +6,12 @@ let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
 // convert story into an array of individul words
 const storyWords = story.split(' ');
-console.log(storyWords);
+
+// using storyWords create a new array that doesn't include unnecessaryWords
+const betterWords = storyWords.filter(word => {
+    if(!unnecessaryWords.includes(word)){
+        return true;
+    }
+})
+console.log(betterWords)
+
