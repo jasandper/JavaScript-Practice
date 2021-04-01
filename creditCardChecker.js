@@ -35,7 +35,6 @@ const validateCred = arr => {
             sumArr.push(double)
         };
     };
-    console.log(sumArr)
     if(sumArr.reduce((n1, n2) => n1 + n2) % 10 === 0) {
         return true
     };
@@ -44,9 +43,8 @@ const validateCred = arr => {
 
 // createa a func to findInvalidCards()
 const findInvalidCards = arr => {
-    let invalidArr = arr.filter(element => {
-        validateCred(element) === false
-    })
+    let invalidArr = arr.filter(element => 
+        validateCred(element) === false)
     return invalidArr;
 }
 
