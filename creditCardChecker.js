@@ -34,13 +34,14 @@ const validateCred = arr => {
             }
             sumArr.push(double)
         };
-        if(sumArr.reduce((n1, n2) => n1 + n2) % 10 === 0) {
-            return true
-        };
-        return false;
     };
+    console.log(sumArr)
+    if(sumArr.reduce((n1, n2) => n1 + n2) % 10 === 0) {
+        return true
+    };
+    return false;
 }
-console.log(validateCred(valid1))
+console.log(validateCred(invalid5))
 
 // createa a func to findInvalidCards()
 
