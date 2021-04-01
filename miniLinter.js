@@ -4,52 +4,87 @@ let overusedWords = ['really', 'very', 'basically'];
 
 let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
-// convert story into an array of individul words
-const storyWords = story.split(' ');
-
-// using storyWords create a new array that doesn't include unnecessaryWords
-const betterWords = storyWords.filter(word => {
-    if(!unnecessaryWords.includes(word)){
-        return true;
-    }
-})
-
-// Determine how many times overusedWords appear in story
 let really = 0;
 let very = 0;
 let basically = 0;
-betterWords.forEach(word => {
-   switch (word) {
-       case 'really':
-           really++
-       case 'very':
-           very++
-        case 'basically':
-            basically++
-   }
-})
 
-// Determine how many sentences are in the story
-let sentences = 0;
-betterWords.forEach(word => {
-    if(word[word.length -1] === '.' || word[word.length - 1] === '!') {
-        sentences++
+
+// convert story into an array of individul words
+const storyWords = story.split(' ');
+
+storyWords.forEach(word => {
+    if (word === 'really') {
+        really++;
+    } else if(word === 'very') {
+        very++;
+    } else if (word === 'basically') {
+        basically++;
+    } else {
+        return
     }
 })
+
+// using storyWords create a new array that doesn't include unnecessaryWords
+// const betterWords = storyWords.filter(word => {
+//     if(!unnecessaryWords.includes(word) && !overusedWords.includes(word)){
+//         return true;
+//     } else {
+//         switch(word) {
+//             case 'really':
+//                 really++
+//                 if(really % 2 !== 0) {
+//                     return true
+//                 }
+//             case 'very':
+//                 very++
+//                 if(very % 2 !==0) {
+//                     return true
+//                 }
+//             case 'basically':
+//                 basically++
+//                 if(basically % 2 !== 0) {
+//                     return true
+//                 }
+//             default: 
+//                 return false;
+                
+//         }
+//     }
+
+
+// })
+
+
+// Determine how many sentences are in the story
+// let sentences = 0;
+// betterWords.forEach(word => {
+//     if(word[word.length -1] === '.' || word[word.length - 1] === '!') {
+//         sentences++
+//     }
+// })
+
+// remove every other overusedWord from the story
+
+
+// create a function that finds the most used word in the story
+
+// replace overusedWords with something else
 
 
 
 
 // Word count
-console.log(`original word count: ${storyWords.length}`);
-console.log(`adjusted word count: ${betterWords.length}`);
-// overusedWord count
+// console.log(`original word count: ${storyWords.length}`);
+// console.log(`adjusted word count: ${betterWords.length}`);
+// // overusedWord count
 console.log(`'really' used ${really} times`)
 console.log(`'very' used ${very} times`)
 console.log(`'basically' used ${basically} times`)
-// sentence count
-console.log(`Total sentences: ${sentences}`)
-// print adjusted story
-console.log(betterWords.join(' '))
+// // sentence count
+// console.log(`Total sentences: ${sentences}`)
+// // print adjusted story
+// console.log(betterWords.join(' '))
+
+
 
 
