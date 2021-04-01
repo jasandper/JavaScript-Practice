@@ -49,3 +49,43 @@ const findInvalidCards = arr => {
 }
 
 // create a func to idInvalidCard Companies
+/*
+3 - Amex
+4 - Visa
+5 - Mastercard
+6 - Discove
+? - Company not found
+*/
+
+const idInvalidCard = arr => {
+    let invalidCompaniesArr = [];
+    for(const cardNum of arr) {
+        switch (cardNum[0]) {
+            case 3:
+                if(invalidCompaniesArr.indexOf('Amex') === -1) {
+                    invalidCompaniesArr.push('Amex')
+                }
+                break;
+            case 4:
+                if(invalidCompaniesArr.indexOf('Visa') === -1) {
+                    invalidCompaniesArr.push('Visa')
+                }
+                break;
+            case 5:
+                if(invalidCompaniesArr.indexOf('Mastercard') === -1) {
+                    invalidCompaniesArr.push('Mastercard')
+                }
+                break;
+            case 6:
+                if(invalidCompaniesArr.indexOf('Discover') === -1) {
+                    invalidCompaniesArr.push('Discover')
+                }
+                break;
+            default: 
+                invalidCompaniesArr.push('Company not found')
+        }
+    }
+    return invalidCompaniesArr;
+}
+
+console.log(idInvalidCard(findInvalidCards(batch)));
