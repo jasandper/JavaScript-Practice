@@ -41,8 +41,13 @@ const validateCred = arr => {
     };
     return false;
 }
-console.log(validateCred(invalid5))
 
 // createa a func to findInvalidCards()
+const findInvalidCards = arr => {
+    let invalidArr = arr.filter(element => {
+        validateCred(element) === false
+    })
+    return invalidArr;
+}
 
 // create a func to idInvalidCard Companies
