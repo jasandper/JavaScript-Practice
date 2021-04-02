@@ -88,4 +88,6 @@ const idInvalidCard = arr => {
     return invalidCompaniesArr;
 }
 
-console.log(idInvalidCard(findInvalidCards(batch)));
+// create a func that accepts a string and converts it into an array of nums
+
+// create a func that will convert invalid numbers into valid numbers
