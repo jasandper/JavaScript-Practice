@@ -6,3 +6,28 @@ h1 {
     color: khaki;
     text-align: center;
 }
+
+h2 {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+.brushes h2 {
+    background-color: mediumspringgreen;
+}
+
+.frames h2 {
+    background-color: lightcoral;
+}
+
+.paint h2 {
+    background-color: skyblue;
+}
+
+.brushes span, .frames span, .paint span {
+    font-family: Helvetica;
+    font-weight: bold;
+    color:blue
+}
