@@ -3,8 +3,9 @@ h1,h2,h3,p {
 }
 
 h1 {
-    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-2/pattern.jpeg");
-    font-size: 100px;
+    /* background-image: url("https://content.codecademy.com/courses/freelance-1/unit-2/pattern.jpeg");
+    font-size: 100px; */
+    background-image: url("./assets/pattern.jpeg");
     font-weight: bold;
     color: khaki;
     text-align: center;
