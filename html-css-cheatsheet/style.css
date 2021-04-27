@@ -1,0 +1,41 @@
+body {
+    font-family: helvetica;
+}
+
+h1 {
+    text-align: center;
+}
+
+.tableTitle {
+    text-align: center;
+    color:darkolivegreen
+}
+
+table {
+    border: 2px solid darkolivegreen;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+
+}
+
+th {
+    background-color: darkseagreen;
+
+}
+
+tbody, thead {
+    font-size: 18px;
+}
+
+
+
+
+.tag, .attr {
+    background-color: khaki;
+    font-size: 15px;
+}
+
+td {
+    border-bottom: 1px solid darkolivegreen;
+}
